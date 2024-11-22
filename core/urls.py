@@ -15,6 +15,9 @@ urlpatterns = [
     path('autores/', views.AutorList.as_view(), name='autores-list'),  # Listar e criar autores
     path('autores/<int:pk>/', views.AutorDetail.as_view(), name='autor-detail'),  # Detalhar, atualizar ou deletar autor
 
+    path('colecoes/', views.ColecaoListCreate.as_view(), name='colecoes-list-create'),
+    path('colecoes/<int:pk>/', views.ColecaoDetail.as_view(), name='colecoes-detail'),
+
     path('api-token-auth/', obtain_auth_token, name='api_token_auth'),
 ]
 

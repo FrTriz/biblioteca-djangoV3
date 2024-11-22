@@ -57,6 +57,7 @@ class ColecaoListCreate(generics.ListCreateAPIView):
     def perform_create(self, serializer):
         serializer.save(colecionador=self.request.user)
 
+
 class ColecaoDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Colecao.objects.all()
     serializer_class = ColecaoSerializer
